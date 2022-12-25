@@ -141,7 +141,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 \textbf{Свойства}
 
 \begin{enumerate}
-	\item P(A|B) $\subseteq$ 0;
+	\item P(A|B) $\geqslant$ 0;
 	\item $P(\Omega|B) = 1$;
 	\item $P(A_1 + \dots\ + A_n + \dots\ | B) = P(A_1|B) + \dots\ + P(A_n|B) + \dots$.
 \end{enumerate}
@@ -465,18 +465,69 @@ $\beta$ называется сигма-алгеброй событий, есл�
 
 \begin{enumerate}
 
-	\item $P(A + B) = P(A) + P(B) - P(AB)$, где A, B $\in \beta$;
+	\item $\forall A, B: A + B = A + (B \backslash A), $ 
+	при этом $A \cdot (B \backslash A) = \varnothing.$
+	В соответствии с аксиомой 3,
+	\begin{equation}
+		\label{stroganov}
+		P(A + B) = P(A) = P(A) + P(B \backslash A)
+	\end{equation}
+	
+	B = AB + (B $\backslash$ A), 
+	
+	причем (AB)(B $\backslash$ A) = $\varnothing$
+	
+	По аксиоме 3, имеем $P(B) = P(AB) + P(B \backslash A) \Rightarrow P(B \backslash A) = P(B) - P(AB).$ Подставим результат \ref{stroganov} и получим
+	
+	\begin{equation}
+		P(A + B) = P(A) + P(B) - P(AB), где A, B \in \beta
+	\end{equation}
 	\item Для любого конечного набора событий $A_1, \dots, A_n$ верно
 	\begin{equation}
-		P(A_1 + \dots + A_n) = + \sum\limits_{1 \leqslant i_1 \leqslant n}P(A_{i_1}) - \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant n}P(A_{i_1}, A_{i_2}) + \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant i_3 \leqslant n}P(A_{i_1}, A_{i_2}, A_{i_3}) - \dots
+		P(A_1 + \dots\ + A_n) = + \sum\limits_{1 \leqslant i_1 \leqslant n}P(A_{i_1}) - \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant n}P(A_{i_1}, A_{i_2}) + \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant i_3 \leqslant n}P(A_{i_1}, A_{i_2}, A_{i_3}) - \dots
 	\end{equation}
 \end{enumerate}
 
 \subsection{Сформулировать определение условной вероятности. Доказать, что она удовлетворяет трем основным свойствам безусловной вероятности.}
 
+\textbf{Пусть} 
 
+\begin{enumerate}
+	\item $A$ и $B$ --- два события, связанные с одним случайным экспериментом;
+	\item дополнительно известно, что в результате произошло событие B и P(B) > 0.
+\end{enumerate}
+
+Условной вероятностью осуществления события A при условии, что произошло B, называется число
+
+\begin{equation}
+	P(A|B) = \frac{P(AB)}{P(B)}, P(B) \neq 0.
+\end{equation}
+
+\textbf{Свойства}
+
+\begin{enumerate}
+	\item $P(A_1 + \dots\ + A_n + \dots\ | B) = \frac{P((A_1 + \dots\ + A_n + \dots\ )B)}{P(B)} = \frac{1}{P(B)} \cdot P(A_1 B + A_2 B + \cdot + A_n B + \dots) = A_i, A_j$ несовместны, $i \neq j; A_i B \subseteq A_i, A_j B \subseteq A_j \Rightarrow (A_i B) \bigcap (A_j B) = \varnothing$, и тогда по аксиоме вероятности 3 $= \frac{1}{P(B)} \cdot [P(A_1 B) + \dots\ + P(A_n B) + \dots] = $ (ряд) $\frac{P(A_1 B)}{P(B)} + \dots\ + \frac{P(A_n B)}{P(B)} + \dots\ = P(A_1 | B) + \dots\ + P(A_n | B) + \dots\ $.
+	
+	\item Для любого конечного набора событий $A_1, \dots, A_n$ верно
+	\begin{equation}
+		P(A_1 + \dots\ + A_n) = + \sum\limits_{1 \leqslant i_1 \leqslant n}P(A_{i_1}) - \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant n}P(A_{i_1}, A_{i_2}) + \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant i_3 \leqslant n}P(A_{i_1}, A_{i_2}, A_{i_3}) - \dots
+	\end{equation}
+
+\end{enumerate}
 
 \subsection{Доказать теоремы о формулах умножения вероятностей для двух событий и для произвольного числа событий.}
+
+\textbf{Теорема}. Формула умножения вероятностей для двух событий 
+
+\textbf{Пусть}
+
+\begin{enumerate}
+	\item A, B --- события;
+	\item P(A) > 0.
+\end{enumerate}
+
+Тогда P(AB) = P(A) P(B|A)
+
 \subsection{Сформулировать определение пары независимых событий. Сформулировать и доказать теорему о связи независимости двух событий с условными вероятностями их осуществления.}
 
 
