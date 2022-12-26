@@ -60,7 +60,7 @@
 $\beta$ называется сигма-алгеброй событий, если выполнены условия: 
 \begin{enumerate}
 	\item если $A \in \beta$, то $\overline{A} \in \beta$;
-	\item если $A_1, \dots, A_n, \dots \in \beta$, то $A_1 + \dots + A_n + \dots \in \beta$
+	\item если $A_1, \dots, A_n, \dots\ \in \beta$, то $A_1 + \dots\ + A_n + \dots\ \in \beta$
 \end{enumerate}
 
 \textbf{Свойства}
@@ -101,7 +101,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 	\item $P(\overline{A}) = 1 - P(A)$;
 	\item $P(\varnothing) = 0$;
 	\item Если $A \subseteq B$, то $P(A) \leqslant P(B)$;
-	\item $\forall A \in \beta: 0 \leqslant P(a) \leqslant 1$;
+	\item $\forall A \in \beta: 0 \leqslant P(A) \leqslant 1$;
 	\item $P(A + B) = P(A) + P(B) - P(AB)$, где A, B $\in \beta$;
 	\item Для любого конечного набора событий $A_1, \dots, A_n$ верно
 	\begin{equation}
@@ -170,7 +170,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 
 \begin{enumerate}
 	\item $A_1, \dots, A_n$ --- события;
-	\item $P(A_1 \cdot \dots\ \cdot > 0)$.
+	\item $P(A_1 \cdot \dots\ \cdot A_n > 0)$.
 \end{enumerate}
 Тогда 
 \begin{equation}
@@ -206,10 +206,10 @@ A и B --- два события, связанные с некоторым сл�
 
 \textbf{Определение}
 
-События $A_1, \dots A_n$ называется попарно независимыми в совокупности, если
+События $A_1, \dots , A_n$ называется попарно независимыми в совокупности, если
 
 \begin{equation}
-	\forall k \in \{2, \dots, n\} \forall \forall i_1 < i_2 < \dots < i_k: P(A_{i_1}, \dots, A_{i_k}) = P(A_{i_1}) \cdot \dots P(A_{i_k})
+	\forall k \in \{2, \dots, n\} \forall \forall i_1 < i_2 < \dots < i_k: P(A_{i_1}, \dots, A_{i_k}) = P(A_{i_1}) \cdot \dots\ \cdot P(A_{i_k})
 \end{equation}
 
 \textbf{Как связаны}
@@ -228,7 +228,7 @@ A и B --- два события, связанные с некоторым сл�
 \begin{enumerate}
 	\item $P(H_i) > 0, i = 1, n$;
 	\item $H_iH_j = \varnothing$ при $i \neq j$;
-	\item $H_1 + \dots H_n = \Omega$.
+	\item $H_1 + \dots\ + H_n = \Omega$.
 \end{enumerate}
 
 \textbf{События из полной группы могут быть независимыми?}
