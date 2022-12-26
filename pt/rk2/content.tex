@@ -409,7 +409,7 @@ k успехов:
 $\beta$ называется сигма-алгеброй событий, если выполнены условия: 
 \begin{enumerate}
 	\item если $A \in \beta$, то $\overline{A} \in \beta$;
-	\item если $A_1, \dots, A_n, \dots \in \beta$, то $A_1 + \dots + A_n + \dots \in \beta$
+	\item если $A_1, \dots, A_n, \dots \in \beta$, то $A_1 + \dots\ + A_n + \dots\ \in \beta$
 \end{enumerate}
 
 \textbf{Свойства}
@@ -428,7 +428,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 \begin{enumerate}
 	\item По определению $\beta \neq \varnothing \Rightarrow \exists A \subseteq Q: A \in \beta;$ из определения сигма-алгебры (аксиома 1) $\exists (A + \overline{A}) \in \beta;$ т.к $A + \overline{A} = \Omega$, то $\Omega \in \beta$.
 	\item Т.к. $\Omega \in \beta$, то, по аксиоме 1, $\overline{\Omega} \in \beta$, а $\overline{\Omega} = \varnothing \Rightarrow \varnothing \in \beta$. 
-	\item Из существования событий $A_1, \dots, A_n, \dots \in \beta$ по аксиоме 1 следует, что $\exists \overline{A_1}, \dots, \overline{A_n}, \dots, \in \beta$, и из аксиомы 1 --- существование дополнение этого объединения: $\overline{\overline{A_1}, \dots, \overline{A_n}, \dots}, \in \beta \Rightarrow^{\text{Де-Морган}} \overline{\overline{A_1}}, \dots, \overline{\overline{A_n}}, \dots, \in \beta$, что тривиально преобразуется в $A_1 \cdot \dots  A_n \cdot \dots\  \in \beta$.
+	\item Из существования событий $A_1, \dots, A_n, \dots \in \beta$ по аксиоме 1 следует, что $\exists \overline{A_1}, \dots, \overline{A_n}, \dots, \in \beta$. По аксиоме 2 следует существование объединения $\exists \overline{A_1} + \dots\ + \overline{A_n} +  \dots\ + \in \beta$, и из аксиомы 1 --- существование дополнение этого объединения: $\overline{\overline{A_1} \cdot \dots\ \cdot \overline{A_n} \dots\ }, \in \beta \Rightarrow^{\text{Де-Морган}} \overline{\overline{A_1}} \cdot \dots\ \cdot \overline{\overline{A_n}} \cdot \dots\  \in \beta$, что тривиально преобразуется в $A_1 \cdot \dots  A_n \cdot \dots\  \in \beta$.
 	
 	\item Из свойств операций над множествами можно заключить, что A \ B = $A \cdot \overline{B}.$ По аксиоме 1, из B $\in \beta => \overline{B} \in \beta$. По следствию 3, $A, \overline{B} \in \beta => A \cdot \overline{B} \in \beta$, что является утверждением $A \backslash B \in \beta$ 
 \end{enumerate}
