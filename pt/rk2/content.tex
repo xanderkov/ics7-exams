@@ -418,7 +418,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 	
 	\item $\Omega \in \beta$;
 	\item $\varnothing \in \beta$;
-	\item если $A_1, \dots\ A_n, \dots\ \in \beta$, то $A_1 \cdot A_2 \cdot \dots\ A_n \dots\ \in \beta$;
+	\item если $A_1, \dots\ A_n, \dots\ \in \beta$, то $A_1 \cdot A_2 \cdot \dots\ \cdot A_n \dots\  \in \beta$;
 	\item если $A_1, A_2 \in \beta$, то $A_1 \backslash A_2 \in \beta$
 \end{enumerate}
 
@@ -429,6 +429,8 @@ $\beta$ называется сигма-алгеброй событий, есл�
 	\item По определению $\beta \neq \varnothing \Rightarrow \exists A \subseteq Q: A \in \beta;$ из определения сигма-алгебры (аксиома 1) $\exists (A + \overline{A}) \in \beta;$ т.к $A + \overline{A} = \Omega$, то $\Omega \in \beta$.
 	\item Т.к. $\Omega \in \beta$, то, по аксиоме 1, $\overline{\Omega} \in \beta$, а $\overline{\Omega} = \varnothing \Rightarrow \varnothing \in \beta$. 
 	\item Из существования событий $A_1, \dots, A_n, \dots \in \beta$ по аксиоме 1 следует, что $\exists \overline{A_1}, \dots, \overline{A_n}, \dots, \in \beta$, и из аксиомы 1 --- существование дополнение этого объединения: $\overline{\overline{A_1}, \dots, \overline{A_n}, \dots}, \in \beta \Rightarrow^{\text{Де-Морган}} \overline{\overline{A_1}}, \dots, \overline{\overline{A_n}}, \dots, \in \beta$, что тривиально преобразуется в $A_1 \cdot \dots  A_n \cdot \dots\  \in \beta$.
+	
+	\item Из свойств операций над множествами можно заключить, что A \ B = $A \cdot \overline{B}.$ По аксиоме 1, из B $\in \beta => \overline{B} \in \beta$. По следствию 3, $A, \overline{B} \in \beta => A \cdot \overline{B} \in \beta$, что является утверждением $A \backslash B \in \beta$ 
 \end{enumerate}
 
 
@@ -465,7 +467,9 @@ $\beta$ называется сигма-алгеброй событий, есл�
 	
 	\item $P(\varnothing) = P(\overline{\Omega})$; по свойству 1 $P(\varnothing) = 1 - P(\Omega) = \lgroup \Omega=1$ (по аксиоме 2)$\rgroup = 0$;
 	
-	\item $A \subseteq B \Rightarrow B = A + (B \backslash A)$ Тогда $P(B) = P(A + (B \backslash A)) =$ $\lgroup$ A, B $\backslash$ A несовместны, используем аксиому 3$\rgroup = P(A) = P(B \backslash A) \geqslant P(A) \Rightarrow^{{P(B\backslash A \geqslant 0 \text{по акс. 1})}} P(B) \geqslant P(A)$ .
+	\item $A \subseteq B \Rightarrow B = A + (B \backslash A)$ 
+	
+	Тогда $P(B) = P(A + (B \backslash A)) =$ $\lgroup$ A, B $\backslash$ A несовместны, используем аксиому 3$\rgroup = P(A) = P(B \backslash A) \geqslant P(A) \Rightarrow^{{P(B\backslash A \geqslant 0 \text{по акс. 1})}} P(B) \geqslant P(A)$ .
 
 \end{enumerate}
 
@@ -533,9 +537,14 @@ $\beta$ называется сигма-алгеброй событий, есл�
 \textbf{Свойства}
 
 \begin{enumerate}
+	
+	\item $P(A|B) = \frac{P(AB)}{P(B)} => P(A|B) \geqslant 0.$
+	
+	\item $P(\Omega|B) = \frac{P(\Omega)}{P(B)} = \frac{P(B)}{P(B)} = 1.$
+	
 	\item $P(A_1 + \dots\ + A_n + \dots\ | B) =$ 
 	
-	$\frac{P((A_1 + \dots\ + A_n + \dots\ )B)}{P(B)} $
+	$ = \frac{P((A_1 + \dots\ + A_n + \dots\ )B)}{P(B)} = $
 	
 	$= \frac{1}{P(B)} \cdot P(A_1 B + A_2 B + \cdot + A_n B + \dots) = A_i, A_j$ несовместны, 
 	
@@ -543,10 +552,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 	
 	$= \frac{1}{P(B)} \cdot [P(A_1 B) + \dots\ + P(A_n B) + \dots] = $ (ряд) $\frac{P(A_1 B)}{P(B)} + \dots\ + \frac{P(A_n B)}{P(B)} + \dots\ = P(A_1 | B) + \dots\ + P(A_n | B) + \dots\ $.
 	
-	\item Для любого конечного набора событий $A_1, \dots, A_n$ верно
-	\begin{equation}
-		P(A_1 + \dots\ + A_n) = + \sum\limits_{1 \leqslant i_1 \leqslant n}P(A_{i_1}) - \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant n}P(A_{i_1}, A_{i_2}) + \sum\limits_{1 \leqslant i_1 \leqslant i_2 \leqslant i_3 \leqslant n}P(A_{i_1}, A_{i_2}, A_{i_3}) - \dots
-	\end{equation}
+	
 
 \end{enumerate}
 
@@ -665,7 +671,7 @@ $\beta$ называется сигма-алгеброй событий, есл�
 События $A_1, \dots A_n$ называется попарно независимыми в совокупности, если
 
 \begin{equation}
-	\forall k \in \{2, \dots, n\} \forall \forall i_1 < i_2 < \dots < i_k: P(A_{i_1}, \dots, A_{i_k}) = P(A_{i_1}) \cdot \dots P(A_{i_k})
+	\forall k \in \{2, \dots, n\} \forall \forall i_1 < i_2 < \dots < i_k: P(A_{i_1}, \dots, A_{i_k}) = P(A_{i_1}) \cdot \dots\ \cdot P(A_{i_k})
 \end{equation}
 
 \textbf{Пример. (Бернштейна)}
