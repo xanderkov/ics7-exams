@@ -33,9 +33,10 @@
 Случайная величина называется дискретной, если множество ее возможных значений конечно или счетно.
 
 Если множество значений дискретной случайной величины конечно, то закон ее распределения можно задать с использованием таблицы.
+\newpage
 \begin{table}[ht!]
 	\begin{center}
-		\caption{Все воможные значения СВ X $p_i = P\{X=x_i\}, i = \overline{1,n}$}
+		\caption{Все возможные значения СВ X $p_i = P\{X=x_i\}, i = \overline{1,n}$}
 		\label{tbl:best}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
@@ -46,6 +47,8 @@
 		\end{tabular}
 	\end{center}
 \end{table}
+
+
 
 \textbf{Определения}
 
@@ -507,7 +510,7 @@ $M[\phi(X)] = \int\limits_{-\infty}^{+\infty} \phi(x) \cdot f(x)dx$, если X 
 \subsubsection*{Свойства ковариации}
 
 \begin{enumerate}
-	\item $D(X, Y) = DX + DY + 2cov(X, Y)$;
+	\item $D(X + Y) = DX + DY + 2cov(X, Y)$;
 	\item $cov(X, X) = DX$;
 	\item Если $X, Y$ --- независимые, то $cov(X, Y) = 0$;
 	\item $cov(a_{1}X + b_{1}, a_{2}Y + b_{2}) = a_{1}a_{2}cov(X, Y)$;
